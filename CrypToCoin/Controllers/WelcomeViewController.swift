@@ -15,7 +15,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
         calculatorButton.titleLabel?.adjustsFontSizeToFitWidth = true
         calculatorButton.titleLabel?.minimumScaleFactor = 0.5
         calculatorButton.layer.cornerRadius = 10.0
