@@ -18,6 +18,7 @@ class CalculatorViewController: UIViewController {
     var coinManager = CoinManager()
     var pickerCurrency = "AUD"
     var targetCurrency: String!
+    var value = "1.0"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,10 @@ class CalculatorViewController: UIViewController {
         pickerView.dataSource = self
         pickerView.delegate = self
         
+    }
+    
+    @IBAction func calculateButtonPressed(_ sender: UIButton) {
+        resultField.text = value
     }
 }
 
@@ -53,10 +58,9 @@ extension CalculatorViewController: UITextFieldDelegate {
         }
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-//        if let value = valueField.text {
-//
-//        }
-//        valueField.text = ""
+        if let newValue = valueField.text {
+            value = newValue
+        }
     }
 }
 

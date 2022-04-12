@@ -165,7 +165,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJr-wI-vzg">
-                                                <rect key="frame" x="210" y="2.6666666666666714" width="180" height="216"/>
+                                                <rect key="frame" x="210" y="3" width="180" height="216"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="180" id="yel-UF-1vg"/>
                                                 </constraints>
@@ -244,6 +244,9 @@
                                                 <state key="normal" title="CALCULATE">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="calculateButtonPressed:" destination="V4X-hP-4mv" eventType="touchUpInside" id="O2i-On-zMK"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
