@@ -14,6 +14,10 @@
 		93951EB027FF1CF900918009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93951EAF27FF1CF900918009 /* Assets.xcassets */; };
 		93951EB327FF1CF900918009 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93951EB127FF1CF900918009 /* LaunchScreen.storyboard */; };
 		93951EC1280326C400918009 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93951EC0280326C400918009 /* CalculatorViewController.swift */; };
+		93951EC628040B6F00918009 /* CoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93951EC528040B6F00918009 /* CoinManager.swift */; };
+		93951EC928040C8900918009 /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93951EC828040C8900918009 /* CoinData.swift */; };
+		93951ECB28044A2B00918009 /* CryptoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93951ECA28044A2B00918009 /* CryptoData.swift */; };
+		93BB0BBD280475CA000C88CC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BB0BBC280475CA000C88CC /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		93951EB227FF1CF900918009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93951EB427FF1CF900918009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93951EC0280326C400918009 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		93951EC528040B6F00918009 /* CoinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinManager.swift; sourceTree = "<group>"; };
+		93951EC828040C8900918009 /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
+		93951ECA28044A2B00918009 /* CryptoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoData.swift; sourceTree = "<group>"; };
+		93BB0BBC280475CA000C88CC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 			children = (
 				93951EA627FF1CF600918009 /* AppDelegate.swift */,
 				93951EA827FF1CF600918009 /* SceneDelegate.swift */,
+				93951EC728040B9100918009 /* Models */,
 				93951EBA28023C7500918009 /* Controllers */,
 				93951EBB28023C8100918009 /* View */,
 				93951EAF27FF1CF900918009 /* Assets.xcassets */,
@@ -74,6 +83,7 @@
 			children = (
 				93951EAA27FF1CF600918009 /* WelcomeViewController.swift */,
 				93951EC0280326C400918009 /* CalculatorViewController.swift */,
+				93BB0BBC280475CA000C88CC /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -84,6 +94,16 @@
 				93951EAC27FF1CF600918009 /* Main.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		93951EC728040B9100918009 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				93951EC528040B6F00918009 /* CoinManager.swift */,
+				93951EC828040C8900918009 /* CoinData.swift */,
+				93951ECA28044A2B00918009 /* CryptoData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,10 +177,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93951EC928040C8900918009 /* CoinData.swift in Sources */,
 				93951EAB27FF1CF600918009 /* WelcomeViewController.swift in Sources */,
 				93951EA727FF1CF600918009 /* AppDelegate.swift in Sources */,
+				93951ECB28044A2B00918009 /* CryptoData.swift in Sources */,
 				93951EC1280326C400918009 /* CalculatorViewController.swift in Sources */,
 				93951EA927FF1CF600918009 /* SceneDelegate.swift in Sources */,
+				93951EC628040B6F00918009 /* CoinManager.swift in Sources */,
+				93BB0BBD280475CA000C88CC /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

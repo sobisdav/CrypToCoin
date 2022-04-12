@@ -8,29 +8,71 @@
 import UIKit
 
 class CalculatorViewController: UIViewController {
+    
+    @IBOutlet weak var valueField: UITextField!
+    @IBOutlet weak var resultField: UILabel!
+    @IBOutlet weak var currencyLabel: UILabel!
+    @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var calculateButton: UIButton!
-    @IBAction func calculateButtonPressed(_ sender: UIButton) {
-    }
-    @IBOutlet weak var leftCurrencyPicker: UIPickerView!
-    @IBOutlet weak var rightCurrencyPicker: UIPickerView!
-    @IBAction func segmentedControl(_ sender: UISegmentedControl) {
-    }
+    
+    var coinManager = CoinManager()
+    var pickerCurrency = "AUD"
+    var targetCurrency: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         calculateButton.layer.cornerRadius = 10.0
+        resultField.layer.masksToBounds = true
+        resultField.layer.cornerRadius = 5.0
+        currencyLabel.text = targetCurrency
+        valueField.delegate = self
+        pickerView.dataSource = self
+        pickerView.delegate = self
+        
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
+//MARK: - UITextFieldDelegate
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension CalculatorViewController: UITextFieldDelegate {
+    @IBAction func searchButtonPressed(_ sender: UIButton) {
+        valueField.endEditing(true)
     }
-    */
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        valueField.endEditing(true)
+        return true
+    }
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField.text != "" {
+            return true
+        }
+        else {
+            textField.placeholder = "Type something."
+            return false
+        }
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+//        if let value = valueField.text {
+//
+//        }
+//        valueField.text = ""
+    }
+}
 
+//MARK: - UIPickerViewDataSource & UIPickerViewDelegate
+
+extension CalculatorViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return coinManager.coinCurrencies.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return coinManager.coinCurrencies[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        pickerCurrency = coinManager.coinCurrencies[row]
+    }
 }
