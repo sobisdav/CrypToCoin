@@ -107,7 +107,7 @@
                                     <constraint firstAttribute="height" constant="80" id="fv9-sC-BRo"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="210" id="pFL-YI-9eM"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="CALCULATOR">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -154,15 +154,15 @@
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="267.66666666666669"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter value:" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aRC-Bx-jIa">
-                                                <rect key="frame" x="20" y="114" width="160" height="40"/>
+                                                <rect key="frame" x="15" y="114" width="170" height="40"/>
                                                 <color key="backgroundColor" red="0.31372549020000001" green="0.64705882349999999" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="ncQ-82-VkW"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="ncQ-82-VkW"/>
                                                     <constraint firstAttribute="height" constant="40" id="oJ1-Us-evg"/>
                                                 </constraints>
                                                 <color key="textColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                             </textField>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJr-wI-vzg">
                                                 <rect key="frame" x="210" y="26" width="180" height="216"/>
@@ -173,7 +173,7 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="aRC-Bx-jIa" firstAttribute="centerY" secondItem="Ktf-rQ-LeU" secondAttribute="centerY" id="FB9-jz-caw"/>
-                                            <constraint firstItem="aRC-Bx-jIa" firstAttribute="leading" secondItem="Ktf-rQ-LeU" secondAttribute="leading" constant="20" id="dkT-o3-GEb"/>
+                                            <constraint firstItem="aRC-Bx-jIa" firstAttribute="leading" secondItem="Ktf-rQ-LeU" secondAttribute="leading" constant="15" id="dkT-o3-GEb"/>
                                             <constraint firstAttribute="trailing" secondItem="tJr-wI-vzg" secondAttribute="trailing" id="ee3-G1-NXj"/>
                                             <constraint firstItem="tJr-wI-vzg" firstAttribute="centerY" secondItem="Ktf-rQ-LeU" secondAttribute="centerY" id="hez-mM-pRP"/>
                                         </constraints>
@@ -182,11 +182,11 @@
                                         <rect key="frame" x="0.0" y="275.66666666666663" width="390" height="261.66666666666663"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJd-Jp-yO3">
-                                                <rect key="frame" x="20" y="111" width="160" height="40"/>
+                                                <rect key="frame" x="15" y="111" width="170" height="40"/>
                                                 <color key="backgroundColor" red="0.31372549020000001" green="0.64705882349999999" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="tpc-Mg-Gvp"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="yk1-BK-Kgg"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="yk1-BK-Kgg"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                 <color key="textColor" red="0.30588235289999999" green="0.43137254899999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -200,7 +200,7 @@
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="KJd-Jp-yO3" firstAttribute="leading" secondItem="MF1-Qu-bya" secondAttribute="leading" constant="20" id="LmQ-Nx-Ppg"/>
+                                            <constraint firstItem="KJd-Jp-yO3" firstAttribute="leading" secondItem="MF1-Qu-bya" secondAttribute="leading" constant="15" id="LmQ-Nx-Ppg"/>
                                             <constraint firstItem="eCh-2H-qGx" firstAttribute="centerY" secondItem="MF1-Qu-bya" secondAttribute="centerY" id="QEk-WX-tOa"/>
                                             <constraint firstAttribute="trailing" secondItem="eCh-2H-qGx" secondAttribute="trailing" constant="65" id="cfD-JT-tQ9"/>
                                             <constraint firstItem="KJd-Jp-yO3" firstAttribute="centerY" secondItem="MF1-Qu-bya" secondAttribute="centerY" id="mSh-ly-ZFO"/>
