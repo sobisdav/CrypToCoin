@@ -157,7 +157,7 @@
                                                 <rect key="frame" x="10" y="114" width="200" height="40"/>
                                                 <color key="backgroundColor" red="0.31372549020000001" green="0.64705882349999999" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="ncQ-82-VkW"/>
+                                                    <constraint firstAttribute="width" constant="200" id="ncQ-82-VkW"/>
                                                     <constraint firstAttribute="height" constant="40" id="oJ1-Us-evg"/>
                                                 </constraints>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -186,7 +186,7 @@
                                                 <color key="backgroundColor" red="0.31372549020000001" green="0.64705882349999999" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="tpc-Mg-Gvp"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="yk1-BK-Kgg"/>
+                                                    <constraint firstAttribute="width" constant="200" id="yk1-BK-Kgg"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
