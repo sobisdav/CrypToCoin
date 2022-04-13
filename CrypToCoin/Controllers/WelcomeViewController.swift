@@ -16,12 +16,10 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         for name in coinManager.cryptoCurrencies {
             let object = CryptoData(name: name)
             model.append(object)
         }
-        
         tableView.dataSource = self
         tableView.delegate = self
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")

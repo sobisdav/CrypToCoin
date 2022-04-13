@@ -43,26 +43,32 @@ class CalculatorViewController: UIViewController {
 //MARK: - UITextFieldDelegate
 
 extension CalculatorViewController: UITextFieldDelegate {
-    @IBAction func searchButtonPressed(_ sender: UIButton) {
-        valueField.endEditing(true)
-    }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        valueField.endEditing(true)
+        textField.endEditing(true)
         return true
     }
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         if textField.text != "" {
-            return true
+            let doub = Double(textField.text!)
+            if doub != nil {
+                return true
+            }
+            else {
+                textField.text = ""
+                textField.placeholder = "Enter a number!"
+                return false
+            }
         }
         else {
-            textField.placeholder = "Type something."
+            textField.placeholder = "Enter a number!"
             return false
         }
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if let newValue = valueField.text {
+        if let newValue = textField.text {
             value = newValue
         }
+        textField.endEditing(true)
     }
 }
 
