@@ -55,6 +55,9 @@ extension WelcomeViewController:UITableViewDelegate,UITableViewDataSource{
         var content = cell.defaultContentConfiguration()
         content.text = model[indexPath.row].name
         content.textProperties.alignment = .center
+        content.textProperties.adjustsFontSizeToFitWidth = true
+        content.textProperties.font = UIFont.boldSystemFont(ofSize: 25)
+        content.textProperties.color = UIColor.darkGray
         cell.contentConfiguration = content
         return cell;
     }
