@@ -160,7 +160,7 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="ncQ-82-VkW"/>
                                                     <constraint firstAttribute="height" constant="40" id="oJ1-Us-evg"/>
                                                 </constraints>
-                                                <color key="textColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                             </textField>
@@ -189,7 +189,7 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="yk1-BK-Kgg"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                <color key="textColor" red="0.30588235289999999" green="0.43137254899999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCh-2H-qGx">

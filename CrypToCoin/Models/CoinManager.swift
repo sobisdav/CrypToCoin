@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CoinManagerDelegate {
-    func didUpdatePrice (price: String, currency: String)
+    func didUpdatePrice (price: String)
     func didFailWithError (error: Error)
 }
 
@@ -22,8 +22,8 @@ struct CoinManager {
     let coinCurrencies = ["AUD","BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
     let cryptoCurrencies = ["BTC","ETH","BNB","LTC","SOL","MKR","BCH","DOGE"]
 
-    func getCoinPrice (for currency: String) {
-        let urlString = "\(baseURL)/\(currency)/USD?apikey=\(apiKey)"
+    func getCoinPrice (for crypto: String) {
+        let urlString = "\(baseURL)/\(crypto)/USD?apikey=\(apiKey)"
         if let url = URL(string: urlString) {
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, response, error) in
@@ -33,8 +33,28 @@ struct CoinManager {
                 }
                 if let safeData = data {
                     if let cryptoPrice = self.parseJSON(safeData) {
-                        let priceString = String(format: "%.2f", cryptoPrice)
-                        self.delegate?.didUpdatePrice(price: priceString, currency: currency)
+                        let priceString = String(format: "%.4f", cryptoPrice)
+                        self.delegate?.didUpdatePrice(price: priceString)
+                    }
+                }
+            }
+            task.resume()
+        }
+    }
+    
+    func getCryptoPrice (from currency: String, to crypto: String) {
+        let urlString = "\(baseURL)/\(currency)/\(crypto)?apikey=\(apiKey)"
+        if let url = URL(string: urlString) {
+            let session = URLSession(configuration: .default)
+            let task = session.dataTask(with: url) { (data, response, error) in
+                if error != nil {
+                    self.delegate?.didFailWithError(error: error!)
+                    return
+                }
+                if let safeData = data {
+                    if let cryptoPrice = self.parseJSON(safeData) {
+                        let priceString = String(format: "%f", cryptoPrice)
+                        self.delegate?.didUpdatePrice(price: priceString)
                     }
                 }
             }

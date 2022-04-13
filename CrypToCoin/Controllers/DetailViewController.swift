@@ -11,7 +11,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var cryptoLabel: UILabel!
     @IBOutlet weak var currentRateLabel: UILabel!
     @IBOutlet weak var calculatorButton: UIButton!
-    var cryptoName: String!
+    var cryptoName = "BTC"
     var coinManager = CoinManager()
     
     override func viewDidLoad() {
@@ -35,9 +35,9 @@ class DetailViewController: UIViewController {
 //MARK: - CoinManagerDelegate
 
 extension DetailViewController: CoinManagerDelegate {
-    func didUpdatePrice(price: String, currency: String) {
+    func didUpdatePrice(price: String) {
         DispatchQueue.main.async {
-            self.currentRateLabel.text = "1 \(currency) = \(price) USD"
+            self.currentRateLabel.text = "1 \(self.cryptoName) = \(price) USD"
         }
     }
     

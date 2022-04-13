@@ -17,7 +17,7 @@ class CalculatorViewController: UIViewController {
     
     var coinManager = CoinManager()
     var pickerCurrency = "AUD"
-    var targetCurrency: String!
+    var targetCurrency = "BTC"
     var value = "1.0"
     
     override func viewDidLoad() {
@@ -27,6 +27,7 @@ class CalculatorViewController: UIViewController {
         resultField.layer.masksToBounds = true
         resultField.layer.cornerRadius = 5.0
         currencyLabel.text = targetCurrency
+        coinManager.delegate = self
         valueField.delegate = self
         pickerView.dataSource = self
         pickerView.delegate = self
@@ -34,7 +35,8 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func calculateButtonPressed(_ sender: UIButton) {
-        resultField.text = value
+        resultField.text = "Getting data..."
+        coinManager.getCryptoPrice(from: pickerCurrency, to: targetCurrency)
     }
 }
 
@@ -78,5 +80,19 @@ extension CalculatorViewController: UIPickerViewDataSource, UIPickerViewDelegate
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         pickerCurrency = coinManager.coinCurrencies[row]
+    }
+}
+
+//MARK: - CoinManagerDelegate
+
+extension CalculatorViewController: CoinManagerDelegate {
+    func didUpdatePrice(price: String) {
+        DispatchQueue.main.async {
+            self.resultField.text = String(Double(price)! * Double(self.value)!)
+        }
+    }
+    
+    func didFailWithError(error: Error) {
+        print(error)
     }
 }
