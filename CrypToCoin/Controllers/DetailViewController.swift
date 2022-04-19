@@ -21,7 +21,7 @@ class DetailViewController: UIViewController {
         calculatorButton.layer.cornerRadius = 10.0
         coinManager.delegate = self
         cryptoLabel.text = cryptoName
-        coinManager.getCoinPrice(for: cryptoName)
+        coinManager.getPrice(from: cryptoName, to: "USD")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

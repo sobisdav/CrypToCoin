@@ -36,7 +36,7 @@ class CalculatorViewController: UIViewController {
     
     @IBAction func calculateButtonPressed(_ sender: UIButton) {
         resultField.text = "Getting data..."
-        coinManager.getCryptoPrice(from: pickerCurrency, to: targetCurrency)
+        coinManager.getPrice(from: pickerCurrency, to: targetCurrency)
     }
 }
 
@@ -67,6 +67,9 @@ extension CalculatorViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let newValue = textField.text {
             value = newValue
+        }
+        else {
+            print("Couldn't assign value from input field.")
         }
         textField.endEditing(true)
     }

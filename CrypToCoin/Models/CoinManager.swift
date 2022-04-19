@@ -21,29 +21,14 @@ struct CoinManager {
     
     let coinCurrencies = ["AUD","BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
     let cryptoCurrencies = ["BTC","ETH","BNB","LTC","SOL","MKR","BCH","DOGE"]
-
-    func getCoinPrice (for crypto: String) {
-        let urlString = "\(baseURL)/\(crypto)/USD?apikey=\(apiKey)"
-        if let url = URL(string: urlString) {
-            let session = URLSession(configuration: .default)
-            let task = session.dataTask(with: url) { (data, response, error) in
-                if error != nil {
-                    self.delegate?.didFailWithError(error: error!)
-                    return
-                }
-                if let safeData = data {
-                    if let cryptoPrice = self.parseJSON(safeData) {
-                        let priceString = String(format: "%.4f", cryptoPrice)
-                        self.delegate?.didUpdatePrice(price: priceString)
-                    }
-                }
-            }
-            task.resume()
-        }
+    
+    func buildURL (from firstCurrency: String, to secondCurrency: String) -> String {
+        let urlString = "\(baseURL)/\(firstCurrency)/\(firstCurrency)?apikey=\(apiKey)"
+        return urlString
     }
     
-    func getCryptoPrice (from currency: String, to crypto: String) {
-        let urlString = "\(baseURL)/\(currency)/\(crypto)?apikey=\(apiKey)"
+    func getPrice (from firstCurrency: String, to secondCurrency: String) {
+        let urlString = buildURL(from: firstCurrency, to: secondCurrency)
         if let url = URL(string: urlString) {
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, response, error) in
