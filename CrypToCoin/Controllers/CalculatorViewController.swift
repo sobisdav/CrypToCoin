@@ -95,9 +95,9 @@ extension CalculatorViewController: UIPickerViewDataSource, UIPickerViewDelegate
 //MARK: - CoinManagerDelegate
 
 extension CalculatorViewController: CoinManagerDelegate {
-    func didUpdatePrice(price: String) {
+    func didUpdatePrice(price: Double) {
         DispatchQueue.main.async {
-            self.resultField.text = String(Double(price)! * Double(self.value)!)
+            self.resultField.text = String(format: "%.8f", price * Double(self.value)!)
         }
     }
     

@@ -35,9 +35,9 @@ class DetailViewController: UIViewController {
 //MARK: - CoinManagerDelegate
 
 extension DetailViewController: CoinManagerDelegate {
-    func didUpdatePrice(price: String) {
+    func didUpdatePrice(price: Double) {
         DispatchQueue.main.async {
-            self.currentRateLabel.text = "1 \(self.cryptoName) = \(price) USD"
+            self.currentRateLabel.text = "1 \(self.cryptoName) = \(String(format: "%.2f", price)) USD"
         }
     }
     

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CoinManagerDelegate {
-    func didUpdatePrice (price: String)
+    func didUpdatePrice (price: Double)
     func didFailWithError (error: Error)
 }
 
@@ -23,7 +23,7 @@ struct CoinManager {
     let cryptoCurrencies = ["BTC","ETH","BNB","LTC","SOL","MKR","BCH","DOGE"]
     
     func buildURL (from firstCurrency: String, to secondCurrency: String) -> String {
-        let urlString = "\(baseURL)/\(firstCurrency)/\(firstCurrency)?apikey=\(apiKey)"
+        let urlString = "\(baseURL)/\(firstCurrency)/\(secondCurrency)?apikey=\(apiKey)"
         return urlString
     }
     
@@ -38,8 +38,7 @@ struct CoinManager {
                 }
                 if let safeData = data {
                     if let cryptoPrice = self.parseJSON(safeData) {
-                        let priceString = String(format: "%f", cryptoPrice)
-                        self.delegate?.didUpdatePrice(price: priceString)
+                        self.delegate?.didUpdatePrice(price: cryptoPrice)
                     }
                 }
             }
