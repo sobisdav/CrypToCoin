@@ -27,15 +27,17 @@ class WelcomeViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToDetail" {
+            // swiftlint:disable force_cast
             let destinationVC = segue.destination as! DetailViewController
+            // swiftlint:enable force_cast
             destinationVC.cryptoName = cryptoName
         }
     }
 }
 
-//MARK: - UITableViewDelegate & UITableViewDataSource
+// MARK: - UITableViewDelegate & UITableViewDataSource
 
-extension WelcomeViewController:UITableViewDelegate,UITableViewDataSource{
+extension WelcomeViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -49,7 +51,7 @@ extension WelcomeViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath);
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         var content = cell.defaultContentConfiguration()
         content.text = model[indexPath.row].name
         content.textProperties.alignment = .center
@@ -57,7 +59,7 @@ extension WelcomeViewController:UITableViewDelegate,UITableViewDataSource{
         content.textProperties.font = UIFont.boldSystemFont(ofSize: 25)
         content.textProperties.color = UIColor.darkGray
         cell.contentConfiguration = content
-        return cell;
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -65,4 +67,3 @@ extension WelcomeViewController:UITableViewDelegate,UITableViewDataSource{
         self.performSegue(withIdentifier: "goToDetail", sender: self)
     }
 }
-

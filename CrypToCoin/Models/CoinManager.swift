@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol CoinManagerDelegate {
+protocol CoinManagerDelegate: AnyObject {
     func didUpdatePrice (price: Double)
     func didFailWithError (error: Error)
 }
@@ -19,8 +19,8 @@ struct CoinManager {
     let baseURL = "https://rest.coinapi.io/v1/exchangerate"
     let apiKey = "0412637F-C45D-45D0-9A95-C6834CC762D9"
     
-    let coinCurrencies = ["AUD","BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
-    let cryptoCurrencies = ["BTC","ETH","BNB","LTC","SOL","MKR","BCH","DOGE"]
+    let coinCurrencies = ["AUD", "BRL", "CAD", "CNY", "EUR", "GBP", "HKD", "IDR", "ILS", "INR", "JPY", "MXN", "NOK", "NZD", "PLN", "RON", "RUB", "SEK", "SGD", "USD", "ZAR"]
+    let cryptoCurrencies = ["BTC", "ETH", "BNB", "LTC", "SOL", "MKR", "BCH", "DOGE"]
     
     func buildURL (from firstCurrency: String, to secondCurrency: String) -> String {
         let urlString = "\(baseURL)/\(firstCurrency)/\(secondCurrency)?apikey=\(apiKey)"
@@ -52,12 +52,10 @@ struct CoinManager {
             let decodedData = try decoder.decode(CoinData.self, from: data)
             let lastPrice = decodedData.rate
             return lastPrice
-        }
-        catch {
+        } catch {
             delegate?.didFailWithError(error: error)
             return nil
         }
     }
 
 }
-

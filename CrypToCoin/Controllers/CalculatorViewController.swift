@@ -40,7 +40,7 @@ class CalculatorViewController: UIViewController {
     }
 }
 
-//MARK: - UITextFieldDelegate
+// MARK: - UITextFieldDelegate
 
 extension CalculatorViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -48,18 +48,16 @@ extension CalculatorViewController: UITextFieldDelegate {
         return true
     }
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        if textField.text != "" {
+        if !textField.text!.isEmpty {
             let doub = Double(textField.text!)
             if doub != nil {
                 return true
-            }
-            else {
+            } else {
                 textField.text = ""
                 textField.placeholder = "Enter a number!"
                 return false
             }
-        }
-        else {
+        } else {
             textField.placeholder = "Enter a number!"
             return false
         }
@@ -67,15 +65,14 @@ extension CalculatorViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let newValue = textField.text {
             value = newValue
-        }
-        else {
+        } else {
             print("Couldn't assign value from input field.")
         }
         textField.endEditing(true)
     }
 }
 
-//MARK: - UIPickerViewDataSource & UIPickerViewDelegate
+// MARK: - UIPickerViewDataSource & UIPickerViewDelegate
 
 extension CalculatorViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -92,7 +89,7 @@ extension CalculatorViewController: UIPickerViewDataSource, UIPickerViewDelegate
     }
 }
 
-//MARK: - CoinManagerDelegate
+// MARK: - CoinManagerDelegate
 
 extension CalculatorViewController: CoinManagerDelegate {
     func didUpdatePrice(price: Double) {

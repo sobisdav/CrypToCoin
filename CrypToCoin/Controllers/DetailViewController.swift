@@ -26,13 +26,15 @@ class DetailViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToCalculator" {
+            // swiftlint:disable force_cast
             let destinationVC = segue.destination as! CalculatorViewController
+            // swiftlint:enable force_cast
             destinationVC.targetCurrency = cryptoName
         }
     }
 }
 
-//MARK: - CoinManagerDelegate
+// MARK: - CoinManagerDelegate
 
 extension DetailViewController: CoinManagerDelegate {
     func didUpdatePrice(price: Double) {

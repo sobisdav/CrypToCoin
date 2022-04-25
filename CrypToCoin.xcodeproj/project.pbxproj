@@ -18,6 +18,7 @@
 		93951EC928040C8900918009 /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93951EC828040C8900918009 /* CoinData.swift */; };
 		93951ECB28044A2B00918009 /* CryptoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93951ECA28044A2B00918009 /* CryptoData.swift */; };
 		93BB0BBD280475CA000C88CC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BB0BBC280475CA000C88CC /* DetailViewController.swift */; };
+		93D6178328169E99006933A0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 93D6178228169E99006933A0 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		93951EC828040C8900918009 /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
 		93951ECA28044A2B00918009 /* CryptoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoData.swift; sourceTree = "<group>"; };
 		93BB0BBC280475CA000C88CC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		93D6178228169E99006933A0 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				93951EAF27FF1CF900918009 /* Assets.xcassets */,
 				93951EB127FF1CF900918009 /* LaunchScreen.storyboard */,
 				93951EB427FF1CF900918009 /* Info.plist */,
+				93D6178228169E99006933A0 /* .swiftlint.yml */,
 			);
 			path = CrypToCoin;
 			sourceTree = "<group>";
@@ -116,6 +119,7 @@
 				93951E9F27FF1CF600918009 /* Sources */,
 				93951EA027FF1CF600918009 /* Frameworks */,
 				93951EA127FF1CF600918009 /* Resources */,
+				93D6178128169D31006933A0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -164,6 +168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93D6178328169E99006933A0 /* .swiftlint.yml in Resources */,
 				93951EB327FF1CF900918009 /* LaunchScreen.storyboard in Resources */,
 				93951EB027FF1CF900918009 /* Assets.xcassets in Resources */,
 				93951EAE27FF1CF600918009 /* Main.storyboard in Resources */,
@@ -171,6 +176,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		93D6178128169D31006933A0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		93951E9F27FF1CF600918009 /* Sources */ = {
