@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3CCCD648FB560DA5AABFC8AC /* Pods_CrypToCoin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F5EA58B479371CDD2F3CCD /* Pods_CrypToCoin.framework */; };
 		9384983828290C7D00689654 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9384983728290C7D00689654 /* WelcomeViewController.swift */; };
 		9384983A28290C9100689654 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9384983928290C9100689654 /* LoginViewController.swift */; };
 		9384983C28290CA200689654 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9384983B28290CA200689654 /* RegisterViewController.swift */; };
@@ -26,9 +25,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0AEAC7706CFAA4A7B7A2815D /* Pods-CrypToCoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrypToCoin.debug.xcconfig"; path = "Target Support Files/Pods-CrypToCoin/Pods-CrypToCoin.debug.xcconfig"; sourceTree = "<group>"; };
-		35A08394E8A6790760423BF0 /* Pods-CrypToCoin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrypToCoin.release.xcconfig"; path = "Target Support Files/Pods-CrypToCoin/Pods-CrypToCoin.release.xcconfig"; sourceTree = "<group>"; };
-		39F5EA58B479371CDD2F3CCD /* Pods_CrypToCoin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrypToCoin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9384983728290C7D00689654 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		9384983928290C9100689654 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9384983B28290CA200689654 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -53,29 +49,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CCCD648FB560DA5AABFC8AC /* Pods_CrypToCoin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		838BD57D6BF2DFD30ABD08A0 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0AEAC7706CFAA4A7B7A2815D /* Pods-CrypToCoin.debug.xcconfig */,
-				35A08394E8A6790760423BF0 /* Pods-CrypToCoin.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		93951E9A27FF1CF600918009 = {
 			isa = PBXGroup;
 			children = (
 				93951EA527FF1CF600918009 /* CrypToCoin */,
 				93951EA427FF1CF600918009 /* Products */,
-				838BD57D6BF2DFD30ABD08A0 /* Pods */,
-				E0648EF1A11D0290EEC15F4C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,14 +118,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		E0648EF1A11D0290EEC15F4C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				39F5EA58B479371CDD2F3CCD /* Pods_CrypToCoin.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,12 +125,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93951EB727FF1CF900918009 /* Build configuration list for PBXNativeTarget "CrypToCoin" */;
 			buildPhases = (
-				5305472DF13C735B32E9F375 /* [CP] Check Pods Manifest.lock */,
 				93951E9F27FF1CF600918009 /* Sources */,
 				93951EA027FF1CF600918009 /* Frameworks */,
 				93951EA127FF1CF600918009 /* Resources */,
 				93D6178128169D31006933A0 /* ShellScript */,
-				40CFF45F72E6F3E537AB6C26 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,45 +187,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		40CFF45F72E6F3E537AB6C26 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CrypToCoin/Pods-CrypToCoin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CrypToCoin/Pods-CrypToCoin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CrypToCoin/Pods-CrypToCoin-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5305472DF13C735B32E9F375 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CrypToCoin-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		93D6178128169D31006933A0 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -428,7 +363,6 @@
 		};
 		93951EB827FF1CF900918009 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0AEAC7706CFAA4A7B7A2815D /* Pods-CrypToCoin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -458,7 +392,6 @@
 		};
 		93951EB927FF1CF900918009 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35A08394E8A6790760423BF0 /* Pods-CrypToCoin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CrypToCoin 🪙" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMp-JG-aei" customClass="CLTypingLabel" customModule="CLTypingLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CrypToCoin 🪙" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMp-JG-aei">
                                 <rect key="frame" x="64.666666666666686" y="138" width="285" height="48"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
                                 <color key="textColor" red="0.30588235289999999" green="0.43137254899999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

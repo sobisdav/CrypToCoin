@@ -6,10 +6,9 @@
 //
 
 import UIKit
-import CLTypingLabel
 
 class WelcomeViewController: UIViewController {
-    @IBOutlet weak var titleLabel: CLTypingLabel!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
     
