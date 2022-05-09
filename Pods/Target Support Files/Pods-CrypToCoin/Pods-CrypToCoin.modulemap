@@ -1,0 +1,6 @@
+framework module Pods_CrypToCoin {
+  umbrella header "Pods-CrypToCoin-umbrella.h"
+
+  export *
+  module * { export * }
+}
