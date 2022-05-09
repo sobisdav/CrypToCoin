@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CalculatorViewController: UIViewController {
     
@@ -31,12 +32,19 @@ class CalculatorViewController: UIViewController {
         valueField.delegate = self
         pickerView.dataSource = self
         pickerView.delegate = self
-        
     }
     
     @IBAction func calculateButtonPressed(_ sender: UIButton) {
         resultField.text = "Getting data..."
         coinManager.getPrice(from: pickerCurrency, to: targetCurrency)
+    }
+    @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
+        do {
+            try Auth.auth().signOut()
+            navigationController?.popToRootViewController(animated: true)
+        } catch let signOutError as NSError {
+          print("Error signing out: %@", signOutError)
+        }
     }
 }
 
@@ -77,6 +85,9 @@ extension CalculatorViewController: UITextFieldDelegate {
 extension CalculatorViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        return NSAttributedString(string: coinManager.coinCurrencies[row], attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
     }
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return coinManager.coinCurrencies.count

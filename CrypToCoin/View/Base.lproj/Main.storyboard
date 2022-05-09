@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -94,7 +93,7 @@
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="915-lX-tzN">
                                 <rect key="frame" x="102" y="732" width="210" height="80"/>
@@ -108,6 +107,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginPressed:" destination="UJa-XG-45g" eventType="touchUpInside" id="wKI-z9-3BH"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter e-mail:" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="piF-mN-6hN">
                                 <rect key="frame" x="47" y="148" width="320" height="40"/>
@@ -118,7 +120,7 @@
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BKM-HR-5gs"/>
@@ -161,7 +163,7 @@
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRf-ER-Vbe">
                                 <rect key="frame" x="102" y="732" width="210" height="80"/>
@@ -175,6 +177,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerPressed:" destination="Qu6-Q6-Z1W" eventType="touchUpInside" id="DFG-Y7-xYq"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter e-mail:" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MPL-ON-f6y">
                                 <rect key="frame" x="47" y="148" width="320" height="40"/>
@@ -185,7 +190,7 @@
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rQu-DZ-te0"/>
@@ -241,7 +246,7 @@
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0Ea-eO-s7p">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="680"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </tableView>
                                         </subviews>
                                     </stackView>
@@ -273,7 +278,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Uxp-MV-ylo" secondAttribute="bottom" id="qTN-di-faU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="72P-ZV-cMe"/>
+                    <navigationItem key="navigationItem" id="72P-ZV-cMe">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="kZ1-HT-Ood">
+                            <connections>
+                                <action selector="logOutPressed:" destination="BYZ-38-t0r" id="eEb-TZ-sf3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="0Ea-eO-s7p" id="hJB-p7-q8q"/>
                         <segue destination="E5i-o2-WVs" kind="show" identifier="goToDetail" id="mVF-td-xI3"/>
@@ -331,7 +342,13 @@
                             <constraint firstItem="tBN-Tp-itG" firstAttribute="centerX" secondItem="tU8-oj-M2B" secondAttribute="centerX" id="nB0-Jt-O5j"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="nDS-6Z-KTq"/>
+                    <navigationItem key="navigationItem" id="nDS-6Z-KTq">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="uOc-dY-RyZ">
+                            <connections>
+                                <action selector="logOutPressed:" destination="E5i-o2-WVs" id="tZl-p6-RsJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="calculatorButton" destination="tBN-Tp-itG" id="d9d-5o-aQz"/>
                         <outlet property="cryptoLabel" destination="rUV-gK-Jn9" id="e3A-rv-c9p"/>
@@ -398,7 +415,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCh-2H-qGx">
                                                 <rect key="frame" x="302.33333333333331" y="125.33333333333331" width="46.666666666666686" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -446,7 +463,13 @@
                             <constraint firstAttribute="trailing" secondItem="DT8-gu-lg6" secondAttribute="trailing" id="rd9-3h-a2b"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="JyD-C2-828"/>
+                    <navigationItem key="navigationItem" id="JyD-C2-828">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="Dlu-uS-PXs">
+                            <connections>
+                                <action selector="logOutPressed:" destination="V4X-hP-4mv" id="a1A-Qz-x0I"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="calculateButton" destination="hdv-wZ-i6D" id="hSs-P6-xPz"/>
                         <outlet property="currencyLabel" destination="eCh-2H-qGx" id="bzz-Tu-ikr"/>
@@ -481,9 +504,4 @@
     <inferredMetricsTieBreakers>
         <segue reference="qmP-r4-dk3"/>
     </inferredMetricsTieBreakers>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

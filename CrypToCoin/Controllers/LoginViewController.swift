@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
@@ -17,6 +18,25 @@ class LoginViewController: UIViewController {
         loginButton.titleLabel?.adjustsFontSizeToFitWidth = true
         loginButton.titleLabel?.minimumScaleFactor = 0.5
         loginButton.layer.cornerRadius = 10.0
+        emailField.delegate = self
+        passwordField.delegate = self
     }
-    
+    @IBAction func loginPressed(_ sender: UIButton) {
+        if let email = emailField.text, let password = passwordField.text {
+            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                if let err = error {
+                    print(err)
+                } else {
+                    self.performSegue(withIdentifier: "loginToTable", sender: self)
+                }
+            }
+        }
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return true
+    }
 }

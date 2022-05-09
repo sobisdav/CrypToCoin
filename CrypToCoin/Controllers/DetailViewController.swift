@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class DetailViewController: UIViewController {
     @IBOutlet weak var cryptoLabel: UILabel!
@@ -30,6 +31,14 @@ class DetailViewController: UIViewController {
             let destinationVC = segue.destination as! CalculatorViewController
             // swiftlint:enable force_cast
             destinationVC.targetCurrency = cryptoName
+        }
+    }
+    @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
+        do {
+            try Auth.auth().signOut()
+            navigationController?.popToRootViewController(animated: true)
+        } catch let signOutError as NSError {
+          print("Error signing out: %@", signOutError)
         }
     }
 }

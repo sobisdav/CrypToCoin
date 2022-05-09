@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class TableViewController: UIViewController {
     
@@ -16,6 +17,8 @@ class TableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
+        navigationItem.hidesBackButton = true
         for name in coinManager.cryptoCurrencies {
             let object = CryptoData(name: name)
             model.append(object)
@@ -31,6 +34,14 @@ class TableViewController: UIViewController {
             let destinationVC = segue.destination as! DetailViewController
             // swiftlint:enable force_cast
             destinationVC.cryptoName = cryptoName
+        }
+    }
+    @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
+        do {
+            try Auth.auth().signOut()
+            navigationController?.popToRootViewController(animated: true)
+        } catch let signOutError as NSError {
+          print("Error signing out: %@", signOutError)
         }
     }
 }
