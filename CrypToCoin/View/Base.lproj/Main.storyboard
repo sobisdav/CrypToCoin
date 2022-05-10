@@ -122,6 +122,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXn-p9-WNc">
+                                <rect key="frame" x="207" y="300" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.30588235289999999" green="0.43137254899999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BKM-HR-5gs"/>
                         <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -130,6 +136,8 @@
                             <constraint firstItem="915-lX-tzN" firstAttribute="centerX" secondItem="p7m-RE-zVd" secondAttribute="centerX" id="2Jw-og-I4l"/>
                             <constraint firstItem="dUL-mU-nQa" firstAttribute="centerX" secondItem="p7m-RE-zVd" secondAttribute="centerX" id="6DR-xI-Fac"/>
                             <constraint firstItem="BKM-HR-5gs" firstAttribute="bottom" secondItem="915-lX-tzN" secondAttribute="bottom" constant="50" id="WY0-f6-wvz"/>
+                            <constraint firstItem="nXn-p9-WNc" firstAttribute="centerX" secondItem="p7m-RE-zVd" secondAttribute="centerX" id="XSx-R8-qTC"/>
+                            <constraint firstItem="nXn-p9-WNc" firstAttribute="top" secondItem="p7m-RE-zVd" secondAttribute="top" constant="300" id="ZPl-ir-Gfz"/>
                             <constraint firstItem="piF-mN-6hN" firstAttribute="centerX" secondItem="p7m-RE-zVd" secondAttribute="centerX" id="so9-vC-3lB"/>
                             <constraint firstItem="piF-mN-6hN" firstAttribute="top" secondItem="BKM-HR-5gs" secondAttribute="top" constant="60" id="uu5-So-Hmb"/>
                         </constraints>
@@ -139,6 +147,7 @@
                         <outlet property="emailField" destination="piF-mN-6hN" id="OD9-to-pE4"/>
                         <outlet property="loginButton" destination="915-lX-tzN" id="lQa-WM-XQp"/>
                         <outlet property="passwordField" destination="dUL-mU-nQa" id="btO-ZA-p8D"/>
+                        <outlet property="textLabel" destination="nXn-p9-WNc" id="Clh-WG-Rpe"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="loginToTable" id="Pmc-Jr-dOY"/>
                     </connections>
                 </viewController>
@@ -192,13 +201,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYX-iR-E2u">
+                                <rect key="frame" x="207" y="300" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.30588235289999999" green="0.43137254899999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rQu-DZ-te0"/>
                         <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="MPL-ON-f6y" firstAttribute="top" secondItem="rQu-DZ-te0" secondAttribute="top" constant="60" id="4nM-wW-FVT"/>
+                            <constraint firstItem="eYX-iR-E2u" firstAttribute="top" secondItem="rla-em-ITd" secondAttribute="top" constant="300" id="5hq-Ne-wpK"/>
                             <constraint firstItem="uOR-Y2-WRn" firstAttribute="centerX" secondItem="rla-em-ITd" secondAttribute="centerX" id="9JN-hB-ls0"/>
                             <constraint firstItem="uOR-Y2-WRn" firstAttribute="top" secondItem="MPL-ON-f6y" secondAttribute="bottom" constant="50" id="F7W-BF-1ng"/>
+                            <constraint firstItem="eYX-iR-E2u" firstAttribute="centerX" secondItem="rla-em-ITd" secondAttribute="centerX" id="H7f-hQ-jEG"/>
                             <constraint firstItem="rQu-DZ-te0" firstAttribute="bottom" secondItem="oRf-ER-Vbe" secondAttribute="bottom" constant="50" id="MpP-Y9-5hs"/>
                             <constraint firstItem="oRf-ER-Vbe" firstAttribute="centerX" secondItem="rla-em-ITd" secondAttribute="centerX" id="Noh-od-xL7"/>
                             <constraint firstItem="MPL-ON-f6y" firstAttribute="centerX" secondItem="rla-em-ITd" secondAttribute="centerX" id="u6a-gC-c9u"/>
@@ -209,6 +226,7 @@
                         <outlet property="emailField" destination="MPL-ON-f6y" id="R0g-v3-ZiK"/>
                         <outlet property="passwordField" destination="uOR-Y2-WRn" id="Suv-fZ-af8"/>
                         <outlet property="registerButton" destination="oRf-ER-Vbe" id="bKd-mV-mGQ"/>
+                        <outlet property="textLabel" destination="eYX-iR-E2u" id="bAj-Yz-IxY"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="registerToTable" id="qmP-r4-dk3"/>
                     </connections>
                 </viewController>

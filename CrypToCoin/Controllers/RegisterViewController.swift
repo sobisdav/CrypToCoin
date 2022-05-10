@@ -12,6 +12,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var textLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,11 @@ class RegisterViewController: UIViewController {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let err = error {
                     print(err)
+                    self.passwordField.endEditing(true)
+                    self.passwordField.text = ""
+                    self.emailField.endEditing(true)
+                    self.emailField.text = ""
+                    self.textLabel.text = "Try again"
                 } else {
                     self.performSegue(withIdentifier: Constants.registerSegue, sender: self)
                 }
