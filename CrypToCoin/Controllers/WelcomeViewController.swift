@@ -14,7 +14,6 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLabel.text = "CrypToCoin 🪙"
         loginButton.titleLabel?.adjustsFontSizeToFitWidth = true
         loginButton.titleLabel?.minimumScaleFactor = 0.5
         loginButton.layer.cornerRadius = 10.0

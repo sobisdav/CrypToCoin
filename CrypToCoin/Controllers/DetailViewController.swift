@@ -26,7 +26,7 @@ class DetailViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToCalculator" {
+        if segue.identifier == Constants.calculatorSegue {
             // swiftlint:disable force_cast
             let destinationVC = segue.destination as! CalculatorViewController
             // swiftlint:enable force_cast

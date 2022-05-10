@@ -27,7 +27,7 @@ class RegisterViewController: UIViewController {
                 if let err = error {
                     print(err)
                 } else {
-                    self.performSegue(withIdentifier: "registerToTable", sender: self)
+                    self.performSegue(withIdentifier: Constants.registerSegue, sender: self)
                 }
             }
         } else {

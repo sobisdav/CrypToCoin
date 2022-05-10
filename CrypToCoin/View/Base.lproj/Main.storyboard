@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ucF-vt-at1">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,17 +12,11 @@
             <objects>
                 <viewController id="zgH-00-1yP" customClass="WelcomeViewController" customModule="CrypToCoin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n4c-OC-WYc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CrypToCoin 🪙" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMp-JG-aei">
-                                <rect key="frame" x="64.666666666666686" y="138" width="285" height="48"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
-                                <color key="textColor" red="0.30588235289999999" green="0.43137254899999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nK-nv-076">
-                                <rect key="frame" x="102" y="732" width="210" height="80"/>
+                                <rect key="frame" x="343" y="263" width="210" height="80"/>
                                 <color key="backgroundColor" red="0.30588235289999999" green="0.43137254899999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="cG3-JW-ZLr"/>
@@ -38,7 +32,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOv-qH-JON">
-                                <rect key="frame" x="102" y="627" width="210" height="80"/>
+                                <rect key="frame" x="343" y="158" width="210" height="80"/>
                                 <color key="backgroundColor" red="0.31372549020000001" green="0.64705882349999999" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="hlY-g6-WLm"/>
@@ -53,6 +47,12 @@
                                     <segue destination="UJa-XG-45g" kind="show" identifier="goToLogin" id="lPI-nx-yW8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CrypToCoin 🪙" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMp-JG-aei">
+                                <rect key="frame" x="305.66666666666669" y="94" width="285.00000000000006" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
+                                <color key="textColor" red="0.30588235289999999" green="0.43137254899999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SG1-7L-7SH"/>
                         <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -60,9 +60,9 @@
                             <constraint firstItem="GOv-qH-JON" firstAttribute="centerX" secondItem="n4c-OC-WYc" secondAttribute="centerX" id="3Le-g4-NPY"/>
                             <constraint firstItem="SG1-7L-7SH" firstAttribute="bottom" secondItem="0nK-nv-076" secondAttribute="bottom" constant="50" id="5wM-Qf-4ZM"/>
                             <constraint firstItem="0nK-nv-076" firstAttribute="top" secondItem="GOv-qH-JON" secondAttribute="bottom" constant="25" id="L5W-Jq-hfc"/>
+                            <constraint firstItem="rMp-JG-aei" firstAttribute="centerX" secondItem="n4c-OC-WYc" secondAttribute="centerX" id="LVE-iI-IxZ"/>
                             <constraint firstItem="0nK-nv-076" firstAttribute="centerX" secondItem="n4c-OC-WYc" secondAttribute="centerX" id="MWg-gE-hFa"/>
-                            <constraint firstItem="rMp-JG-aei" firstAttribute="top" secondItem="SG1-7L-7SH" secondAttribute="top" constant="50" id="V7P-zf-pbK"/>
-                            <constraint firstItem="rMp-JG-aei" firstAttribute="centerX" secondItem="n4c-OC-WYc" secondAttribute="centerX" id="xH4-5M-2f6"/>
+                            <constraint firstItem="rMp-JG-aei" firstAttribute="top" secondItem="SG1-7L-7SH" secondAttribute="top" constant="50" id="bWG-FK-lf4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Cwi-y1-um3"/>
@@ -81,11 +81,11 @@
             <objects>
                 <viewController id="UJa-XG-45g" customClass="LoginViewController" customModule="CrypToCoin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p7m-RE-zVd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password:" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dUL-mU-nQa">
-                                <rect key="frame" x="47" y="238" width="320" height="40"/>
+                                <rect key="frame" x="288" y="194" width="320" height="40"/>
                                 <color key="backgroundColor" red="0.31372549020000001" green="0.64705882349999999" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="JCT-ab-POL"/>
@@ -96,7 +96,7 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="915-lX-tzN">
-                                <rect key="frame" x="102" y="732" width="210" height="80"/>
+                                <rect key="frame" x="343" y="263" width="210" height="80"/>
                                 <color key="backgroundColor" red="0.30588235289999999" green="0.43137254899999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="HBI-ZU-Dvl"/>
@@ -112,7 +112,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter e-mail:" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="piF-mN-6hN">
-                                <rect key="frame" x="47" y="148" width="320" height="40"/>
+                                <rect key="frame" x="288" y="104" width="320" height="40"/>
                                 <color key="backgroundColor" red="0.31372549020000001" green="0.64705882349999999" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="70x-bc-2SP"/>
@@ -151,11 +151,11 @@
             <objects>
                 <viewController id="Qu6-Q6-Z1W" customClass="RegisterViewController" customModule="CrypToCoin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rla-em-ITd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password:" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uOR-Y2-WRn">
-                                <rect key="frame" x="47" y="238" width="320" height="40"/>
+                                <rect key="frame" x="288" y="194" width="320" height="40"/>
                                 <color key="backgroundColor" red="0.31372549020000001" green="0.64705882349999999" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="fUB-xd-QIo"/>
@@ -166,7 +166,7 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRf-ER-Vbe">
-                                <rect key="frame" x="102" y="732" width="210" height="80"/>
+                                <rect key="frame" x="343" y="263" width="210" height="80"/>
                                 <color key="backgroundColor" red="0.30588235289999999" green="0.43137254899999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="FAK-YI-mbv"/>
@@ -182,7 +182,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter e-mail:" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MPL-ON-f6y">
-                                <rect key="frame" x="47" y="148" width="320" height="40"/>
+                                <rect key="frame" x="288" y="104" width="320" height="40"/>
                                 <color key="backgroundColor" red="0.31372549020000001" green="0.64705882349999999" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="GbA-8d-mi1"/>
@@ -221,14 +221,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TableViewController" customModule="CrypToCoin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Uxp-MV-ylo">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="44" y="44" width="808" height="349"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="181-eX-7iR">
-                                        <rect key="frame" x="99.333333333333329" y="0.0" width="215.33333333333337" height="36"/>
+                                        <rect key="frame" x="296.33333333333331" y="0.0" width="215.33333333333331" height="36"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CrypToCoin 🪙" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6X-yC-WQ6">
                                                 <rect key="frame" x="0.0" y="0.0" width="215.33333333333334" height="36"/>
@@ -242,16 +242,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xgE-Fs-8Pf">
-                                        <rect key="frame" x="0.0" y="56" width="414" height="680"/>
+                                        <rect key="frame" x="0.0" y="56" width="808" height="255"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0Ea-eO-s7p">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="680"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="808" height="255"/>
                                                 <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </tableView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BdG-qZ-2MB">
-                                        <rect key="frame" x="162" y="756" width="90.333333333333314" height="18"/>
+                                        <rect key="frame" x="359" y="331" width="90.333333333333314" height="18"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="click or scroll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAI-Qs-9Qm">
                                                 <rect key="frame" x="0.0" y="0.0" width="90.333333333333329" height="18"/>
@@ -299,23 +299,23 @@
             <objects>
                 <viewController id="E5i-o2-WVs" customClass="DetailViewController" customModule="CrypToCoin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tU8-oj-M2B">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUV-gK-Jn9">
-                                <rect key="frame" x="156" y="138" width="102" height="60"/>
+                                <rect key="frame" x="397" y="94" width="102" height="60"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
                                 <color key="textColor" red="0.30588235289999999" green="0.43137254899999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 USD = " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8u-W8-KFt">
-                                <rect key="frame" x="147" y="256" width="120" height="36"/>
+                                <rect key="frame" x="388" y="212" width="120" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
                                 <color key="textColor" red="0.31372549020000001" green="0.64705882349999999" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBN-Tp-itG">
-                                <rect key="frame" x="102" y="732" width="210" height="80"/>
+                                <rect key="frame" x="343" y="263" width="210" height="80"/>
                                 <color key="backgroundColor" red="0.30588235289999999" green="0.43137254899999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="fv9-sC-BRo"/>
@@ -364,17 +364,17 @@
             <objects>
                 <viewController id="V4X-hP-4mv" customClass="CalculatorViewController" customModule="CrypToCoin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yhu-Aw-7Ne">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DT8-gu-lg6">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="44" y="44" width="852" height="349"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ktf-rQ-LeU">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="286.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="852" height="129.33333333333334"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter value:" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aRC-Bx-jIa">
-                                                <rect key="frame" x="10" y="123.33333333333334" width="200" height="40"/>
+                                                <rect key="frame" x="10" y="44.666666666666671" width="200" height="40"/>
                                                 <color key="backgroundColor" red="0.31372549020000001" green="0.64705882349999999" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="ncQ-82-VkW"/>
@@ -385,7 +385,7 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                             </textField>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJr-wI-vzg">
-                                                <rect key="frame" x="234" y="35.333333333333314" width="180" height="216"/>
+                                                <rect key="frame" x="672" y="-16.333333333333329" width="180" height="162"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="180" id="yel-UF-1vg"/>
                                                 </constraints>
@@ -399,10 +399,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MF1-Qu-bya">
-                                        <rect key="frame" x="0.0" y="294.66666666666663" width="414" height="280.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="137.33333333333334" width="852" height="126.33333333333334"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJd-Jp-yO3">
-                                                <rect key="frame" x="10" y="120.33333333333331" width="200" height="40"/>
+                                                <rect key="frame" x="10" y="43.333333333333314" width="200" height="40"/>
                                                 <color key="backgroundColor" red="0.31372549020000001" green="0.64705882349999999" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="tpc-Mg-Gvp"/>
@@ -413,7 +413,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCh-2H-qGx">
-                                                <rect key="frame" x="302.33333333333331" y="125.33333333333331" width="46.666666666666686" height="30"/>
+                                                <rect key="frame" x="740.33333333333337" y="48.333333333333314" width="46.666666666666629" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -427,10 +427,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IuT-Ah-5ug">
-                                        <rect key="frame" x="0.0" y="583.33333333333337" width="414" height="190.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="271.66666666666669" width="852" height="77.333333333333314"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdv-wZ-i6D">
-                                                <rect key="frame" x="102" y="55.333333333333258" width="210" height="80"/>
+                                                <rect key="frame" x="321" y="-1.3333333333333712" width="210" height="80"/>
                                                 <color key="backgroundColor" red="0.30588235289999999" green="0.43137254899999999" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="210" id="6HP-TJ-5Q8"/>
@@ -488,7 +488,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ucF-vt-at1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nZs-8s-UTG">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

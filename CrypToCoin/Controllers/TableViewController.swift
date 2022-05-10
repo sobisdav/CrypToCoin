@@ -29,7 +29,7 @@ class TableViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToDetail" {
+        if segue.identifier == Constants.detailSegue {
             // swiftlint:disable force_cast
             let destinationVC = segue.destination as! DetailViewController
             // swiftlint:enable force_cast
@@ -75,6 +75,6 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         cryptoName = model[indexPath.row].name
-        self.performSegue(withIdentifier: "goToDetail", sender: self)
+        self.performSegue(withIdentifier: Constants.detailSegue, sender: self)
     }
 }
