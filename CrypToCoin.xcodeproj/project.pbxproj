@@ -11,6 +11,7 @@
 		932F4900282998F5005FA857 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 932F48FF282998F5005FA857 /* FirebaseFirestore */; };
 		932F4902282998F5005FA857 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 932F4901282998F5005FA857 /* FirebaseFirestoreSwift */; };
 		932F4904282ADCE7005FA857 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4903282ADCE7005FA857 /* Constants.swift */; };
+		932F4907282AE117005FA857 /* GhostTypewriter in Frameworks */ = {isa = PBXBuildFile; productRef = 932F4906282AE117005FA857 /* GhostTypewriter */; };
 		9384983828290C7D00689654 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9384983728290C7D00689654 /* WelcomeViewController.swift */; };
 		9384983A28290C9100689654 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9384983928290C9100689654 /* LoginViewController.swift */; };
 		9384983C28290CA200689654 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9384983B28290CA200689654 /* RegisterViewController.swift */; };
@@ -59,6 +60,7 @@
 				932F48FE282998F5005FA857 /* FirebaseAuth in Frameworks */,
 				932F4900282998F5005FA857 /* FirebaseFirestore in Frameworks */,
 				932F4902282998F5005FA857 /* FirebaseFirestoreSwift in Frameworks */,
+				932F4907282AE117005FA857 /* GhostTypewriter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +153,7 @@
 				932F48FD282998F5005FA857 /* FirebaseAuth */,
 				932F48FF282998F5005FA857 /* FirebaseFirestore */,
 				932F4901282998F5005FA857 /* FirebaseFirestoreSwift */,
+				932F4906282AE117005FA857 /* GhostTypewriter */,
 			);
 			productName = CrypToCoin;
 			productReference = 93951EA327FF1CF600918009 /* CrypToCoin.app */;
@@ -182,6 +185,7 @@
 			mainGroup = 93951E9A27FF1CF600918009;
 			packageReferences = (
 				932F48FC282998F4005FA857 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				932F4905282AE116005FA857 /* XCRemoteSwiftPackageReference "GhostTypewriter" */,
 			);
 			productRefGroup = 93951EA427FF1CF600918009 /* Products */;
 			projectDirPath = "";
@@ -473,6 +477,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		932F4905282AE116005FA857 /* XCRemoteSwiftPackageReference "GhostTypewriter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/wibosco/GhostTypewriter";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -490,6 +502,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 932F48FC282998F4005FA857 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
+		};
+		932F4906282AE117005FA857 /* GhostTypewriter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 932F4905282AE116005FA857 /* XCRemoteSwiftPackageReference "GhostTypewriter" */;
+			productName = GhostTypewriter;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
