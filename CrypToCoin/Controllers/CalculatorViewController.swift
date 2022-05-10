@@ -35,6 +35,7 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func calculateButtonPressed(_ sender: UIButton) {
+        valueField.text = value
         resultField.text = "Getting data..."
         coinManager.getPrice(from: pickerCurrency, to: targetCurrency)
     }
